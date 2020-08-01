@@ -82,7 +82,6 @@ export default class Login extends Vue {
     (this.$refs["ruleForm"] as any).validate((valid: boolean) => {
       if (valid) {
         this.isLogin = true;
-
         (this as any).$axios
           .post("/api/users/login", this.ruleForm)
           .then((res: any) => {
@@ -92,7 +91,6 @@ export default class Login extends Vue {
             localStorage.setItem("tsToken", res.data.token);
             // 存储到vuex中
             this.setUser(res.data.token);
-
             // 登陆成功跳转
             this.$router.push("/");
           })

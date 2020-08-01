@@ -2,10 +2,9 @@
   <div class="layout">
     <!-- 头部 -->
     <layout-header></layout-header>
-    <side-bar></side-bar>
     <!-- 内容 -->
     <Content>
-      <SideBar slot="left"></SideBar>
+      <side-bar slot="left"></side-bar>
       <router-view slot="content"></router-view>
     </Content>
   </div>
